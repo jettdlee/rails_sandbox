@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   resources :widgets, only: [:show, :index]
-  get "manufacturer/:id", to: "manufacturers#show"
+  resources :widget_ratings, only: [:create]
 
   ####
   # Custom routes start here
