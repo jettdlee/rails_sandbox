@@ -19,4 +19,6 @@ Rails.application.routes.draw do
 
   # Used in podcast ads for the 'amazing' campaign
   get "/amazing", to: redirect("/widgets")
+
+  resources :quotes
 end
