@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "2.7.2"
+ruby "3.1.1"
 gem "rails", "~> 7.0.2", ">= 7.0.2.2"
 gem "sprockets-rails"
 gem "pg", "~> 1.1"
@@ -38,3 +38,5 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem "hotwire-rails", "~> 0.1.3"
