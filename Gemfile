@@ -22,6 +22,7 @@ gem 'brakeman'
 gem 'bundler-audit'
 gem 'lograge'
 gem "simple_form", "~> 5.1.0"
+gem "devise", "~> 4.8.1"
 
 group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
