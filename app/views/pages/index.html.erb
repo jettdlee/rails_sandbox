@@ -1,0 +1,9 @@
+<main class='container'>
+  <h1>Quote Editor</h1>
+  <p>A thing created with Hotwire</p>
+  <% if user_signed_in %>
+    <%= link_to "View Quotes", quotes_path, class: "btn btn--dark" %>
+  <% else %>
+    <%= link_to "Sign in", new_user_session_path, class: "btn btn--dark" %>
+  <% end %>
+</main>
