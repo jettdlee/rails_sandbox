@@ -22,8 +22,3 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
-
-
-sudo su - postgres
-psql
-create role rails_sandbox with createdb login superuser password 'rails_sandbox';

@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "esbuild": "^0.25.0"
-  },
-  "scripts": { "build": "esbuild app/javascript/* --bundle --outdir=app/assets/builds" }
-}
