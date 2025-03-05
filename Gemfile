@@ -64,4 +64,4 @@ group :test do
   gem "selenium-webdriver"
 end
 
-gem "simple_form", "~> 5.1.0"
+gem "simple_form", "~> 5.3.1"
