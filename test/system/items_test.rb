@@ -18,30 +18,37 @@ class ItemsTest < ApplicationSystemTestCase
 
   test "should create item" do
     visit items_url
-    click_on "New item"
+    assert_selector "h1", text: "Items"
 
+    click_on "New item"
     fill_in "Name", with: @item.name
+
+    assert_selector "h1", text: "Items"
     click_on "Create Item"
 
-    assert_text "Item was successfully created"
-    click_on "Back"
+    assert_selector "h1", text: "Items"
+    assert_text @item.name
   end
 
   test "should update Item" do
-    visit item_url(@item)
-    click_on "Edit this item", match: :first
+    visit items_path
+    assert_selector "h1", text: "Items"
 
-    fill_in "Name", with: @item.name
+    click_on "Edit this item", match: :first
+    fill_in "Name", with: "Updated Item"
+
+    assert_selector "h1", text: "Items"
     click_on "Update Item"
 
-    assert_text "Item was successfully updated"
-    click_on "Back"
+    assert_selector "h1", text: "Items"
+    assert_text "Updated Item"
   end
 
   test "should destroy Item" do
-    visit item_url(@item)
+    visit items_path
+    assert_text @item.name
     click_on "Destroy this item", match: :first
 
-    assert_text "Item was successfully destroyed"
+    assert_no_text @item.name
   end
 end
