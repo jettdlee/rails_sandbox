@@ -1,0 +1,4 @@
+<%= turbo_stream.prepend "items" do %>
+  <%= render @item %>
+<% end %>
+<%= turbo_stream.update Item.new, "" %>

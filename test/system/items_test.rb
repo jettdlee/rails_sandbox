@@ -2,7 +2,7 @@ require "application_system_test_case"
 
 class ItemsTest < ApplicationSystemTestCase
   setup do
-    @item = items(:one)
+    @item = Item.ordered.first
   end
 
   test "visiting the index" do
@@ -34,7 +34,7 @@ class ItemsTest < ApplicationSystemTestCase
     visit items_path
     assert_selector "h1", text: "Items"
 
-    click_on "Edit this item", match: :first
+    click_on "Edit", match: :first
     fill_in "Name", with: "Updated Item"
 
     assert_selector "h1", text: "Items"
@@ -47,7 +47,7 @@ class ItemsTest < ApplicationSystemTestCase
   test "should destroy Item" do
     visit items_path
     assert_text @item.name
-    click_on "Destroy this item", match: :first
+    click_on "Destroy", match: :first
 
     assert_no_text @item.name
   end
