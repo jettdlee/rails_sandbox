@@ -25,7 +25,7 @@ class ItemsController < ApplicationController
 
     respond_to do |format|
       if @item.save
-        format.html { redirect_to @item, notice: "Item was successfully created." }
+        format.html { redirect_to items_path, notice: "Item was successfully created." }
         format.json { render :show, status: :created, location: @item }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -54,6 +54,7 @@ class ItemsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to items_path, status: :see_other, notice: "Item was successfully destroyed." }
       format.json { head :no_content }
+      format.turbo_stream
     end
   end
 

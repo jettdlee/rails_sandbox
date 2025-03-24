@@ -8,3 +8,6 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 system("bin/rails db:fixtures:load")
+100.times do |i|
+  Item.create(name: i)
+end
