@@ -1,0 +1,10 @@
+<main class="container">
+  <h1>Rails Sandbox</h1>
+  <p>Testing rails functionallity, by J Lee</p>
+
+  <% if user_signed_in? %>
+    <%= link_to "View quotes", items_path, class: "w-full sm:w-auto text-center rounded-md px-3.5 py-2.5 bg-gray-100 hover:bg-gray-50 inline-block font-medium" %>
+  <% else %>
+    <%= link_to "Sign in", new_user_session_path, class: "w-full sm:w-auto text-center rounded-md px-3.5 py-2.5 bg-gray-100 hover:bg-gray-50 inline-block font-medium" %>
+  <% end %>
+</main>

@@ -8,10 +8,16 @@ admin:
   email: admin@test.com
   encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
 
+company_user:
+  company: company_one
+  email: company_user@test.com
+  encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
+
 user:
   email: user@test.com
   encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
 
 hacker:
+  company: company_two
   email: hacker@test.com
   encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>

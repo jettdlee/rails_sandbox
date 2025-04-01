@@ -2,6 +2,16 @@
 
 one:
   name: ItemOne
+  company: company_one
 
 two:
   name: ItemTwo
+  company: company_one
+
+three:
+  name: ItemThree
+  company: company_two
+
+four:
+  name: ItemFour
+  company: company_two
