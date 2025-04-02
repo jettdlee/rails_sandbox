@@ -25,6 +25,9 @@
   <body>
     <%= render "layouts/navbar" %>
     <main class="container mx-auto mt-28 px-5 flex">
+      <div class="fixed top-20 left-20 translate-x-10/100 flex-column items-center animate-flash-expand-vertical">
+        <%= render "layouts/flash" %>
+      </div> 
       <%= yield %>
     </main>
   </body>

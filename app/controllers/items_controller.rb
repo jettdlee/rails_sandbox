@@ -27,7 +27,7 @@ class ItemsController < ApplicationController
       if @item.save
         format.html { redirect_to items_path, notice: "Item was successfully created." }
         format.json { render :show, status: :created, location: @item }
-        format.turbo_stream
+        format.turbo_stream { flash.now[:notice] = "Item was successfully created." }
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @item.errors, status: :unprocessable_entity }
