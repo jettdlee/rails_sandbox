@@ -2,6 +2,7 @@ require "application_system_test_case"
 
 class ItemsTest < ApplicationSystemTestCase
   setup do
+    login_as users(:admin)
     @item = Item.ordered.first
   end
 
